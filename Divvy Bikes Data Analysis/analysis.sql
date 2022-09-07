@@ -142,12 +142,12 @@ GROUP BY end_station_name
 ORDER BY station_trips DESC
 
 
--- average duration in minutes for all customers
+-- average duration in seconds for all customers
 SELECT  AVG(CAST(duration_seconds AS bigint)) AS average_duration
 FROM [BikeTrip_CaseStudy].[dbo].Trip_Data
 
 
--- average duration in minutes for each type of member
+-- average duration in seconds for each type of member
 SELECT member_casual, AVG(CAST(duration_seconds AS bigint)) AS avg_duration
 FROM [BikeTrip_CaseStudy].[dbo].Trip_Data
 GROUP BY member_casual
